@@ -1,7 +1,7 @@
 package DataStructures;
 
 public class CustomQueue {
-    private int[] arrs;
+    private int[] arr;
     private int front;
     private int rear;
 
