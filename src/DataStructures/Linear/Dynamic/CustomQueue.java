@@ -1,4 +1,4 @@
-package DataStructures;
+package DataStructures.Linear.Dynamic;
 
 public class CustomQueue {
     private int[] arr;

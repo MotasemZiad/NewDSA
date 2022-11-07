@@ -1,4 +1,4 @@
-import DataStructures.CustomQueue;
+import DataStructures.Linear.Dynamic.CustomQueue;
 
 public class App {
     public static void main(String[] args) throws Exception {
