@@ -17,5 +17,8 @@ public class App {
 
         double d = new Double(3.1492);
         System.out.println(d);
+
+        int n = Integer.parseInt("1234");
+        System.out.println(n + l);
     }
 }
