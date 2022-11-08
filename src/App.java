@@ -1,26 +1,6 @@
-import DataStructures.Linear.Static.GameEntry;
-import DataStructures.Linear.Static.Scoreboard;
-
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
-
-        GameEntry gameEntry = new GameEntry("Ahmed Ali", 19);
-        GameEntry gameEntry1 = new GameEntry("Mahmoud Ali", 36);
-        GameEntry gameEntry2 = new GameEntry("Mohammed Ali", 9);
-        GameEntry gameEntry3 = new GameEntry("Hassan Khalil", 28);
-
-        System.out.println(gameEntry.toString());
-
-        Scoreboard scoreboard = new Scoreboard(10);
-
-        scoreboard.add(gameEntry);
-        scoreboard.add(gameEntry1);
-        scoreboard.add(gameEntry2);
-        scoreboard.add(gameEntry3);
-        System.out.println(scoreboard.toString());
-        scoreboard.remove(4);
-        System.out.println(scoreboard.toString());
 
     }
 
