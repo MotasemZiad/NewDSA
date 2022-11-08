@@ -1,7 +1,22 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
 
+        int[] myArr = { 1, 2, 3, 4, 5 };
+        try (Scanner s = new Scanner(System.in)) {
+            System.out.println("Enter a number: ");
+            int input = s.nextInt();
+            for (int i = 0; i < myArr.length; i++) {
+                if (input == myArr[i]) {
+                    System.out.println("Found The number: " + input + " at index: " + i);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
     }
 
     public static void checkAge(int age) throws Exception {
