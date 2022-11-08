@@ -1,22 +1,46 @@
-import java.util.*;
-
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
 
-        ArrayList<String> list = new ArrayList<String>();
+        int[] myArray = { 1, 2, 3, 4, 5 };
 
-        list.add("Motasem");
-        list.add("Ahmed");
-        list.add("Fawzy");
-        // list.add(2); // Compile time error
-        String s = list.get(1); // Type casting is not required
-        System.out.println("The second element: " + s);
+        try {
+            System.out.println(myArray[10]);
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        } finally {
+            System.out.println("Try Catch Block end");
+        }
 
-        Iterator<String> itr = list.iterator();
+        // checkAge(15);
+        checkAge(20);
 
-        while (itr.hasNext())
-            System.out.println(itr.next());
+    }
 
+    public static void checkAge(int age) {
+        if (age < 18)
+            throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+        else
+            System.out.println("Access granted - You are old enough!");
+    }
+
+    public static <T> void swap(T[] a, int i, int j) {
+        if (i != j) {
+            T temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+        }
+    }
+
+    public static <T extends Comparable<T>> void sort(T[] items) {
+        for (int i = 0; i < items.length; i++) {
+            int smallest = i;
+            for (int j = i + 1; j < items.length; j++) {
+                if (items[j].compareTo(items[smallest]) >= 0) {
+                    smallest = j;
+                }
+            }
+            swap(items, smallest, i);
+        }
     }
 }
