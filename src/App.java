@@ -1,12 +1,15 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        long startTime = System.currentTimeMillis();
-        int result = sum3(5);
-        long endTime = System.currentTimeMillis();
-        System.out.println("RESULT: " + result);
-        long elapsed = endTime - startTime;
-        System.out.println("Execution of Time in millisecond: " + elapsed);
+        System.out.println(factorial(6));
+    }
+
+    public static int factorial(int n) throws IllegalArgumentException {
+        if (n < 0)
+            throw new IllegalArgumentException();
+        if (n == 0)
+            return 1;
+        else
+            return n * factorial(n - 1);
     }
 
     public static int sum1(int n) {
