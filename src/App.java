@@ -18,5 +18,33 @@ public class App {
         while (itr.hasNext())
             System.out.println(itr.next());
 
+        Integer[] arrayOfIntegers = new Integer[] { 2, 35, 23, 19, 92 };
+        Character[] arrayOfCharacters = new Character[] { 'C', 'F', 'W', 'A', 'D' };
+        sort(arrayOfIntegers);
+        sort(arrayOfCharacters);
+
+        System.out.println(Arrays.toString(arrayOfIntegers));
+        System.out.println(Arrays.toString(arrayOfCharacters));
+
+    }
+
+    public static <T> void swap(T[] a, int i, int j) {
+        if (i != j) {
+            T temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+        }
+    }
+
+    public static <T extends Comparable<T>> void sort(T[] items) {
+        for (int i = 0; i < items.length; i++) {
+            int smallest = i;
+            for (int j = i + 1; j < items.length; j++) {
+                if (items[j].compareTo(items[smallest]) >= 0) {
+                    smallest = j;
+                }
+            }
+            swap(items, smallest, i);
+        }
     }
 }
