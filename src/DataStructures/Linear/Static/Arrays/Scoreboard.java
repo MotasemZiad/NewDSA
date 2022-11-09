@@ -1,4 +1,4 @@
-package DataStructures.Linear.Static;
+package DataStructures.Linear.Static.Arrays;
 
 import java.util.Arrays;
 

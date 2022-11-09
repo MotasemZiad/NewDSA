@@ -1,4 +1,4 @@
-package DataStructures.Linear.Static;
+package DataStructures.Linear.Static.Arrays;
 
 public class GameEntry {
     private String name;
