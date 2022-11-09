@@ -35,6 +35,17 @@ public class SinglyLinkedList<E> {
         size++;
     }
 
+    public void addLast(E e) {
+        Node<E> newest = new Node<>(e, null);
+
+        if (isEmpty())
+            head = newest;
+        else
+            tail.setNext(newest);
+        tail = newest;
+        size++;
+    }
+
     public E removeFirst() {
         if (isEmpty())
             return null;
@@ -45,17 +56,6 @@ public class SinglyLinkedList<E> {
         if (isEmpty())
             tail = null;
         return removedItem;
-    }
-
-    public void addLast(E e) {
-        Node<E> newest = new Node<>(e, null);
-
-        if (isEmpty())
-            head = newest;
-        else
-            tail.setNext(newest);
-        tail = newest;
-        size++;
     }
 
     private static class Node<E> {
