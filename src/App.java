@@ -1,6 +1,15 @@
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello World!");
+        System.out.println(mystery(3));
+    }
+
+    public static int mystery(int n) {
+        if (n < 0)
+            return 2;
+        else {
+            return mystery(n - 1) * mystery(n - 3);
+        }
     }
 
     public static boolean binarySearch(int[] data, int target, int low, int high) {
