@@ -25,7 +25,7 @@ public class App {
                 return binarySearch(data, target, mid + 1, high);
             }
         }
-    }
+    } 
 
     public static int factorial(int n) throws IllegalArgumentException {
         if (n < 0)
